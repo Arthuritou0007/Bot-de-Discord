@@ -20,5 +20,10 @@ async def on_ready():
     print(f'¡Estatus: Conectado exitosamente como {cliente.user}!')
     print('El 1% de hoy está completado. 🚀')
 
+@cliente.event
+async def on_message(mensaje):
+    if mensaje.content == "Gay el de abajo":
+        await mensaje.channel.send("o sea el diablo")
+
 # 5. Encender el bot usando la variable oculta
 cliente.run(TOKEN)
